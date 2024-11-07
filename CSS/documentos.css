@@ -285,19 +285,78 @@ body {
   }
   
 
-/* Responsiveness */
+/* Mejoras Responsivas */
 @media (max-width: 768px) {
+
+
+    * {
+        word-wrap: break-word;  /* Rompe las palabras largas para que no se desborden */
+        overflow-wrap: break-word;  /* Para navegadores modernos */
+    }
+    /* Ajustes para el blog */
+    #blog {
+        padding: 40px 15px;
+    }
     #blog h2 {
-        font-size: 2.2em;
+        font-size: 2em; /* Reduce el tamaño del título en dispositivos pequeños */
+    }
+
+    /* Ajustes para las fases */
+    .phase {
+        padding: 20px 15px; /* Menos padding en dispositivos pequeños */
+        margin-bottom: 15px;
     }
     .phase-title {
-        font-size: 1.7em;
+        font-size: 1.5em; /* Reducir el tamaño del título */
     }
-    .menu-btn,
-    .submenu-btn {
-        font-size: 1em;
+    .phase-content {
+        padding-left: 15px; /* Menos padding */
+    }
+
+    /* Ajustes para el menú */
+    .menu-btn {
+        font-size: 1em; /* Ajustar el tamaño de la fuente */
+        padding: 12px 18px; /* Botón más pequeño */
+    }
+
+    /* Ajustes en el post de blog */
+    .blog-post {
+        padding: 15px;
     }
     .blog-post h4 {
-        font-size: 1.5em; /* Ajustar el tamaño de fuente en pantallas pequeñas */
+        font-size: 1.4em; /* Ajuste tamaño fuente */
+    }
+
+    /* Submenu */
+    .submenu-btn {
+        font-size: 0.9em; /* Ajustar tamaño del botón */
+        padding: 10px; /* Reducir tamaño */
+    }
+
+    /* Mejorar visibilidad y tamaño de botones */
+    .btn-anexos {
+        font-size: 0.9em; /* Reducir tamaño del botón */
+        padding: 8px 16px;
+    }
+
+    /* Hacer los botones circulares un poco más pequeños */
+    .Btn {
+        width: 45px;
+        height: 45px;
+    }
+    .Btn .svgIcon {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Subir el tooltip cuando el dispositivo es pequeño */
+    .tooltip {
+        right: -85px; /* Ajuste para pantalla más pequeña */
+        font-size: 0.85em;
+    }
+
+    /* Asegurar que el contenido no se desborde */
+    .phase, .menu, .blog-post {
+        width: 100%; /* Asegura que los elementos no se salgan de la pantalla */
     }
 }
