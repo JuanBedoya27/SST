@@ -1,0 +1,160 @@
+/* styles.css */
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide {
+    display: none;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Estilos de la sección de evaluación */
+#evaluacion {
+    max-width: 600px;
+    margin: 100px auto;
+    /* Espacio superior para evitar que se superponga con el menú */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Espaciado uniforme entre elementos, reducido a 10px */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    /* Cambiar el color del título para mejor visibilidad */
+}
+
+.question {
+    margin-bottom: 10px;
+    /* Espaciado reducido entre preguntas */
+}
+
+.question p {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    /* Permitir que los labels ocupen toda la línea */
+    margin: 3px 0;
+    /* Espaciado reducido entre las opciones */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    /* Transición suave al pasar el mouse */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.resultado {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    #evaluacion {
+        padding: 15px;
+        margin: 80px auto;
+        /* Ajustar margen en pantallas pequeñas */
+    }
+
+    button {
+        font-size: 14px;
+        /* Reducir el tamaño de la fuente del botón */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        /* Hacer el título más pequeño */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 8px;
+        /* Ajustar el padding en botones para pantallas más pequeñas */
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        /* Hacer el título aún más pequeño */
+    }
+
+    .question p {
+        font-size: 14px;
+        /* Ajustar tamaño de las preguntas */
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.resultado {
+    margin-top: 20px;
+    font-weight: bold;
+}

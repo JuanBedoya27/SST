@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="icon" href="Escudo_de_El_Carmen_de_Viboral.png" type="image/png">
+
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p class="error" id="error" style="display: none;"></p>
+    </div>
+
+    <script>
+        // Crear usuarios predeterminados
+        const users = {
+            '1040033751': '1040033751',
+            '0123456789': '0123456789'
+        };
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se envíe el formulario
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verificar credenciales
+            if (users[username] && users[username] === password) {
+                // Guardar usuario en localStorage
+                localStorage.setItem('username', username);
+                window.location.href = 'index.html'; // Redirigir al dashboard
+            } else {
+                // Mostrar error
+                const errorElement = document.getElementById('error');
+                errorElement.innerText = "Credenciales incorrectas.";
+                errorElement.style.display = 'block';
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

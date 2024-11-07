@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado</title>
+    <link rel="stylesheet" href="/CSS/certificado.css">
+    
+</head>
+
+<body>
+    <!-- Formulario para ingresar los datos del certificado -->
+    <div class="form-container">
+        <h2>Generar Certificado</h2>
+        <form id="certificate-form">
+            <label for="name">Nombre del Participante:</label>
+            <input type="text" id="name" placeholder="Ingrese el nombre completo" required>
+
+            <label for="cedula">Número de Cédula:</label>
+            <input type="text" id="cedula" placeholder="Ingrese el número de cédula" required>
+
+            <button type="button" onclick="generateCertificate()">Generar Certificado</button>
+            <button type="button" onclick="downloadCertificate()">Descargar Certificado</button>
+        </form>
+    </div>
+
+    <!-- Certificado generado -->
+    <div id="certificate" class="certificate-container" style="display: none;">
+        <header>
+            <img src="/Escudo_de_El_Carmen_de_Viboral.png" class="logo">
+            <!-- <div>
+                <h4></h4>
+                <h4>EL CARMEN DE VIBORAL ANTIOQUIA</h4>
+            </div> -->
+        </header>
+        
+
+
+        <p class="title">Lorem ipsum dolor sit amet.</p>
+
+        <h1 id="participant-name">[Nombre del Participante]</h1>
+
+        <p>Identificado con C.C <span id="participant-cedula"><strong>[Número de Cédula]</strong></span></p>
+
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, eligendi.</p>
+        <p class="course-title" id="course-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, amet.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dicta?
+            de <span id="course-duration">[Duración]</span> </p>
+
+        <div class="signature">
+            <img src="/img/firma_digital.jpg" alt="Firma">
+            <p>Fecha de expedición: <span id="issue-date">[Fecha de Expedición]</span></p>
+        </div>
+    </div>
+
+    <script src="/js/certificado.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</body>
+
+</html>

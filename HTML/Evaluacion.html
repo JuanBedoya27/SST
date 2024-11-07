@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="../CSS/style.css"> -->
+    <!-- <link rel="stylesheet" href="../CSS/documentos.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentacion</title>
+    <link rel="stylesheet" href="../CSS/Evaluacion.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="/Escudo_de_El_Carmen_de_Viboral.png" type="image/png">
+
+</head>
+
+<body>
+
+    <div id="navegacion"></div> <!-- Aquí se cargará el contenido de navegación -->
+
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navegacion').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el archivo de navegación:', error));
+    </script>
+
+    <section id="evaluacion">
+        <h2>Evaluación de Seguridad y Salud en el Trabajo</h2>
+        <form id="evaluationForm">
+            <div class="question">
+                <p>1. ¿Cuál es la principal causa de accidentes en el lugar de trabajo?</p>
+                <label><input type="radio" name="q1" value="a" required> Falta de capacitación</label><br>
+                <label><input type="radio" name="q1" value="b"> Uso de equipo de protección personal</label><br>
+                <label><input type="radio" name="q1" value="c"> Condiciones inseguras</label><br>
+                <label><input type="radio" name="q1" value="d"> Todas las anteriores</label>
+            </div>
+
+            <div class="question">
+                <p>2. ¿Qué debe hacer si encuentra un derrame en el suelo?</p>
+                <label><input type="radio" name="q2" value="a" required> Ignorarlo</label><br>
+                <label><input type="radio" name="q2" value="b"> Reportarlo a un supervisor</label><br>
+                <label><input type="radio" name="q2" value="c"> Limpiarlo sin equipo de protección</label><br>
+                <label><input type="radio" name="q2" value="d"> Llamar a los bomberos</label>
+            </div>
+
+            <div class="question">
+                <p>3. ¿Qué significa el acrónimo PPE?</p>
+                <label><input type="radio" name="q3" value="a" required> Personal Protection Equipment</label><br>
+                <label><input type="radio" name="q3" value="b"> Programa de Prevención de Emergencias</label><br>
+                <label><input type="radio" name="q3" value="c"> Plan de Protección Efectiva</label><br>
+                <label><input type="radio" name="q3" value="d"> Ninguna de las anteriores</label>
+            </div>
+
+            <div class="question">
+                <p>4. ¿Qué equipo es esencial para trabajar en alturas?</p>
+                <label><input type="radio" name="q4" value="a" required> Arnes de seguridad</label><br>
+                <label><input type="radio" name="q4" value="b"> Botas de seguridad</label><br>
+                <label><input type="radio" name="q4" value="c"> Gafas de protección</label><br>
+                <label><input type="radio" name="q4" value="d"> Ninguno</label>
+            </div>
+
+            <div class="question">
+                <p>5. ¿Cuál es el color del señalamiento que indica peligro?</p>
+                <label><input type="radio" name="q5" value="a" required> Verde</label><br>
+                <label><input type="radio" name="q5" value="b"> Rojo</label><br>
+                <label><input type="radio" name="q5" value="c"> Amarillo</label><br>
+                <label><input type="radio" name="q5" value="d"> Azul</label>
+            </div>
+
+            <div class="question">
+                <p>6. ¿Qué equipo se debe usar al manejar sustancias químicas?</p>
+                <label><input type="radio" name="q6" value="a" required> Mascarilla</label><br>
+                <label><input type="radio" name="q6" value="b"> Guantes</label><br>
+                <label><input type="radio" name="q6" value="c"> Gafas protectoras</label><br>
+                <label><input type="radio" name="q6" value="d"> Todos los anteriores</label>
+            </div>
+
+            <div class="question">
+                <p>7. ¿Cuál es la correcta postura al levantar un objeto pesado? <img src="lifting.jpg"
+                        alt="Postura correcta" width="100"></p>
+                <label><input type="radio" name="q7" value="a" required> Flexionar las rodillas y mantener la espalda
+                    recta</label><br>
+                <label><input type="radio" name="q7" value="b"> Agacharse sin doblar las rodillas</label><br>
+                <label><input type="radio" name="q7" value="c"> Usar la fuerza de la espalda</label><br>
+                <label><input type="radio" name="q7" value="d"> Levantar rápidamente</label>
+            </div>
+
+            <div class="question">
+                <p>8. ¿Cómo se debe actuar en caso de un incendio?</p>
+                <label><input type="radio" name="q8" value="a" required> Correr hacia la salida</label><br>
+                <label><input type="radio" name="q8" value="b"> Usar el ascensor</label><br>
+                <label><input type="radio" name="q8" value="c"> Llamar a los bomberos</label><br>
+                <label><input type="radio" name="q8" value="d"> Cerrar puertas detrás de uno y evacuar</label>
+            </div>
+
+            <button type="submit">Enviar Respuestas</button>
+        </form>
+        <div id="resultado" class="resultado"></div>
+    </section>
+
+    <script src="/js/Evaluacion.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

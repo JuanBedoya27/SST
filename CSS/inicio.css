@@ -1,0 +1,326 @@
+/* Definición de variables de color */
+:root {
+    --primary-color: #004d40; /* Verde oscuro */
+    --primary-hover-color: #00695c; /* Verde medio para hover */
+    --accent-color: #ffab00; /* Amarillo alerta */
+    --accent-hover-color: #ff9100; /* Naranja alerta para hover */
+    --bg-color: #e0f2f1; /* Verde muy claro */
+    --text-dark: #263238; /* Gris oscuro */
+    --text-gray: #546e7a; /* Gris medio */
+    --border-color: #b0bec5; /* Gris claro */
+}
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--bg-color) 60%, #ffffff);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    color: var(--text-gray);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Quick Access Section */
+.quick-access {
+    padding: 50px 20px;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.quick-access h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quick-link {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.quick-link:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos para la sección de inducción */
+.induction {
+    background-color: #f4f4f9; /* Fondo suave */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centrar el contenido */
+    margin: 20px 0; /* Espaciado exterior */
+}
+
+.induction h2 {
+    font-size: 2rem; /* Tamaño del encabezado */
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+    font-weight: bold; /* Negrita */
+}
+
+.induction p {
+    font-size: 1.1rem; /* Tamaño del texto */
+    color: #666; /* Color gris para el texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Color del botón cuando se pasa el cursor */
+}
+
+/* Botón Documentos */
+.Documents-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    height: 45px;
+    border: none;
+    padding: 0px 15px;
+    border-radius: 5px;
+    background-color: rgb(49, 49, 83);
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    left: 200px;
+    top: 30px;
+}
+
+.folderContainer {
+    width: 40px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.fileBack {
+    z-index: 1;
+    width: 80%;
+    height: auto;
+}
+
+.filePage {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    transition: all 0.3s ease-out;
+}
+
+.fileFront {
+    width: 85%;
+    height: auto;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.95;
+    transform-origin: bottom;
+    transition: all 0.3s ease-out;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.Documents-btn:hover .filePage {
+    transform: translateY(-5px);
+}
+
+.Documents-btn:hover {
+    background-color: rgb(58, 58, 94);
+}
+
+.Documents-btn:active {
+    transform: scale(0.95);
+}
+
+.Documents-btn:hover .fileFront {
+    transform: rotateX(30deg);
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .quick-links {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    .quick-link {
+        margin: 10px 0; /* Añade margen vertical */
+        padding: 15px 20px; /* Aumenta el área clickeable */
+        width: 100%; /* Hace que los enlaces ocupen todo el ancho */
+        text-align: center; /* Centra el texto */
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .Documents-btn{
+        position: relative;
+        left: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-link {
+        padding: 15px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-button {
+        padding: 10px 15px;
+    }
+
+    .about-section h2,
+    .quick-access h2 {
+        font-size: 2em;
+    }
+
+    .about-section p {
+        font-size: 1.1em;
+    }
+
+    .Documents-btn{
+        position: relative;
+        left: 25%;
+    }
+}

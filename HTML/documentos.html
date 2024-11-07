@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentacion</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/documentos.css">
+    <link rel="icon" href="/Escudo_de_El_Carmen_de_Viboral.png" type="image/png">
+
+
+</head>
+<style>
+    .toggle-button {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+    }
+
+    .toggle-button:hover {
+        background-color: var(--primary-hover-color);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .sub-menu-content {
+        padding-left: 20px;
+        /* Espaciado a la izquierda para el contenido */
+        margin-bottom: 20px;
+        /* Margen inferior */
+        border-left: 2px solid #007bff;
+        /* Línea a la izquierda */
+    }
+
+    .blog-post {
+        margin-bottom: 10px;
+        /* Espaciado inferior entre posts */
+    }
+
+    .anexos {
+        margin-top: 10px;
+        /* Espaciado superior para los anexos */
+    }
+</style>
+
+<body>
+    <div id="navegacion"></div> <!-- Aquí se cargará el contenido de navegación -->
+
+    <script>
+        // Función para cargar un archivo y devolverlo como texto
+        async function loadPhase(phase) {
+            try {
+                const response = await fetch(phase);
+                const data = await response.text();
+                document.getElementById('fase-container').innerHTML += data; // Agrega el contenido de la fase
+                initEventListeners(); // Inicializa los eventos después de cargar una nueva fase
+            } catch (error) {
+                console.error('Error al cargar la fase:', error);
+            }
+        }
+
+        // Cargar las fases en orden secuencial
+        async function loadPhasesSequentially() {
+            await loadPhase('fase1.html');
+            await loadPhase('fase2.html');
+            await loadPhase('fase3.html');
+            await loadPhase('fase4.html');
+            // Puedes agregar más fases aquí si es necesario
+        }
+
+        // Cargar la navegación al inicio
+        fetch('/HTML/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navegacion').innerHTML = data;
+                loadPhasesSequentially(); // Cargar las fases después de cargar la navegación
+            })
+            .catch(error => console.error('Error al cargar el archivo de navegación:', error));
+
+        function initEventListeners() {
+            // Manejar los clics en los títulos de fase
+            document.querySelectorAll('.phase-title').forEach(function (title) {
+                title.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('open');
+                });
+            });
+
+            // Manejar los clics en los títulos de submenú
+            document.querySelectorAll('.sub-menu-title').forEach(function (title) {
+                title.addEventListener('click', function () {
+                    const subMenuContent = this.nextElementSibling;
+                    subMenuContent.style.display = subMenuContent.style.display === "block" ? "none" : "block";
+                });
+            });
+        }
+
+        function toggleAnexos(button) {
+            const anexosDiv = button.nextElementSibling;
+            if (anexosDiv.style.display === "none") {
+                anexosDiv.style.display = "block";
+                button.textContent = "Ocultar Anexos";
+            } else {
+                anexosDiv.style.display = "none";
+                button.textContent = "Mostrar Anexos";
+            }
+        }
+
+        function toggleSection(button) {
+            const content = button.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+
+    <main>
+        <section id="Documentos">
+            <div id="fase-container"></div>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/nav.js"></script>
+
+</body>
+
+</html>

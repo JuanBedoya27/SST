@@ -1,0 +1,258 @@
+/* Definición de variables para colores */
+:root {
+    /* Colores principales */
+    --primary-color: #007aff;
+    --primary-hover-color: #0051a8;
+    --accent-color: #ffcc00;
+    --accent-hover-color: #ffbb00; /* Amarillo oscuro para hover */
+    --bg-color: #f5f5f7; /* Fondo gris muy claro */
+    --text-dark: #1c1c1e; /* Gris oscuro */
+    --text-gray: #8e8e93; /* Gris medio */
+    --border-color: #d1d1d6; /* Gris claro */
+    --font-family: 'Roboto'; /* Fuente base */
+    --footer-text-color: #ffffff; /* Color de texto para el pie de página */
+}
+
+/* Resto del CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Times, serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--footer-text-color);
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+    color: #f5f5f7;
+}
+
+nav ul li a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+/* Estilo al pasar el ratón por encima */
+nav ul li a:hover {
+    color: #000;
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* Estilo para la página activa */
+nav ul li a.active {
+    background-color: var(--primary-hover-color);  /* Fondo del enlace activo */
+    color: white;  /* Texto blanco cuando está activo */
+    border-bottom: 3px solid var(--accent-color);  /* Borde inferior */
+}
+
+/* Espaciado ajustado entre fases */
+.phase {
+    margin-bottom: 0px;
+}
+
+.phase-title, .phase-content {
+    padding: 6px;
+    margin-top: 5px;
+}
+
+h2, h3, .section-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 80px 20px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--footer-text-color);
+    padding: 15px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: var(--footer-text-color);
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: var(--accent-hover-color);
+}
+
+.footer-message {
+    font-size: 0.9em;
+}
+
+.logout-link {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.logout-link img {
+    width: 20px;
+    height: auto;
+}
+
+.logout-link:hover {
+    background-color: #f44336;
+    border-color: #d32f2f;
+    color: white;
+}
+
+.logout-link:active {
+    transform: scale(0.95);
+}
+
+/* Ajustes para la sección del logo y texto */
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a diferentes tamaños */
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los logos */
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* Mantiene la proporción del logo */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
+}
+
+.subtext {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center; /* Centra el texto */
+}
+
+/* Ajustes para pantallas medianas (tabletas) */
+@media (max-width: 1200px) {
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .subtext {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 800px) {
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .subtext {
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Reduce el espacio entre los elementos */
+    }
+
+    .logo-container {
+        gap: 5px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles más pequeños) */
+@media (max-width: 600px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .subtext {
+        font-size: 12px;
+    }
+
+    .container {
+        gap: 5px; /* Reduce aún más el espacio entre los elementos */
+    }
+}

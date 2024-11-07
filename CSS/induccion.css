@@ -1,0 +1,188 @@
+/* Variables Globales */
+:root {
+    /* Colores */
+    --color-principal: #007aff;
+    --color-fondo: #f3f3f3;
+    --color-texto: #333;
+    --color-enlace: #000;
+    --color-enlace-hover: #007aff;
+
+    /* Espaciado y dimensiones */
+    --espaciado-base: 1.5rem;
+    --max-ancho: 1800px;
+    --radio-borde: 10px;
+
+    /* Tipografía */
+    --fuente-principal: 'Arial', sans-serif;
+    --tamano-titulo: 2.2rem;
+    --tamano-texto: 1.0rem;
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--fuente-principal);
+    background-color: #f3f3f3;
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}
+
+/*  Sección de Índice */
+.indice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--espaciado-base);
+    text-align: center;
+}
+
+.indice h2 {
+    font-size: var(--tamano-titulo);
+    color: var(--color-principal);
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+/* Contenedor de elementos en el índice */
+.indice-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: var(--max-ancho);
+    justify-content: center;
+}
+
+/* Lista de enlaces en el índice */
+.indice ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1 1 45%;
+    max-width: 350px;
+}
+
+.indice li {
+    font-size: 1.125rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-texto);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.indice li:hover {
+    background-color: rgba(0, 122, 255, 0.1);
+    transform: translateX(4px);
+}
+
+/* Icono y enlaces dentro de cada elemento */
+.indice li::before {
+    content: '✔';
+    color: var(--color-principal);
+    font-size: 1.2rem;
+}
+
+.indice a {
+    color: var(--color-enlace);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.indice a:hover {
+    color: var(--color-enlace-hover);
+}
+
+section {
+    padding: var(--espaciado-base);
+    color: var(--color-texto);
+    max-width: var(--max-ancho);
+    margin: 2rem auto;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-hover);
+}
+
+section h2 {
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+section p {
+    line-height: 1.6;
+    font-size: var(--tamano-texto);
+    margin: 0;
+}
+
+
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    /* Ajusta el tamaño de fuente */
+    .indice h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Ajusta la lista de enlaces */
+    .indice ul {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .indice li {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Ajuste de la lista */
+    .indice ul {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    .indice li {
+        font-size: 1.1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) {
+    .indice-contenido {
+        max-width: var(--max-ancho);
+    }
+
+    /* Ajustes de la sección */
+    section {
+        padding: 2rem;
+    }
+
+    section h2 {
+        font-size: 2.4rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}

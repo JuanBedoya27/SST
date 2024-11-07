@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable en Header</title>
+
+</head>
+
+<body>
+
+    <main>
+        <!-- SECTION DE LOS DOCUMENTOS  -->
+        <section id="Documentos">
+
+
+            <!-- FASE 4  -->
+            <div class="phase">
+                <h3 id="fase1" class="phase-title"> VI Actuar</h3>
+                <div class="phase-content">
+                    <div class="phase">
+
+                        <!-- MEJORAMIENTO   -->
+                        <h3 class="phase-title">Mejoramiento </h3>
+                        <div class="phase-content">
+                            <div class="sub-menu">
+
+                                <!-- Acciones preventivas y correctivas con base en los resultados del SG-SST -->
+                                <button class="toggle-button" onclick="toggleSection(this)">Acciones preventivas y
+                                    correctivas con base en los resultados del SG-SST</button>
+                                <div class="sub-menu-content" style="display: none;">
+                                    <div class="blog-post">
+                                        <h4>7.1.1 Definición de acciones preventivas y correctivas con base en
+                                            resultados del SG-SST</h4>
+                                        <a class="Btn" href="/Documentos/EJEMPLO DESCARGA DE DOCUMENTO.docx" download>
+                                            <svg class="svgIcon" viewBox="0 0 384 512" height="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z">
+                                                </path>
+                                            </svg>
+                                            <span class="icon2"></span>
+                                            <span class="tooltip">Descargar</span>
+                                        </a> <br>
+
+                                        <!-- Contenedor de anexos -->
+                                        <div class="anexos">
+                                            <button class="btn-anexos" onclick="toggleAnexos(this)">Mostrar
+                                                Anexos</button>
+                                            <div class="anexos" style="display: none;">
+                                                <h5>Anexos:</h5>
+                                                <ul>
+                                                    <li><a href="/Documentos/ANEXO_1.docx" download>Descarga
+                                                            Anexo1</a>
+                                                    </li>
+                                                    <li><a href="/Documentos/ANEXO_2.pdf" download>Descargar Anexo 2</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="blog-post">
+                                        <h4>7.1.2 Acciones de mejora conforme a revisión de la alta dirección</h4>
+                                        <a class="Btn" href="/Documentos/EJEMPLO DESCARGA DE DOCUMENTO.docx" download>
+                                            <svg class="svgIcon" viewBox="0 0 384 512" height="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z">
+                                                </path>
+                                            </svg>
+                                            <span class="icon2"></span>
+                                            <span class="tooltip">Descargar</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="blog-post">
+                                        <h4>7.1.3 Acciones de mejora con base en investigaciones de accidentes de
+                                            trabajo y enfermedades laborales </h4>
+                                        <a class="Btn" href="/Documentos/EJEMPLO DESCARGA DE DOCUMENTO.docx" download>
+                                            <svg class="svgIcon" viewBox="0 0 384 512" height="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z">
+                                                </path>
+                                            </svg>
+                                            <span class="icon2"></span>
+                                            <span class="tooltip">Descargar</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="blog-post">
+                                        <h4>7.1.4 Elaboración Plan de mejoramiento, implementación de medidas y acciones
+                                            correctivas solicitidas por autoridades y ARL </h4>
+                                        <a class="Btn" href="/Documentos/EJEMPLO DESCARGA DE DOCUMENTO.docx" download>
+                                            <svg class="svgIcon" viewBox="0 0 384 512" height="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z">
+                                                </path>
+                                            </svg>
+                                            <span class="icon2"></span>
+                                            <span class="tooltip">Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
