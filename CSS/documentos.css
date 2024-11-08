@@ -287,8 +287,6 @@ body {
 
 /* Mejoras Responsivas */
 @media (max-width: 768px) {
-
-
     * {
         word-wrap: break-word;  /* Rompe las palabras largas para que no se desborden */
         overflow-wrap: break-word;  /* Para navegadores modernos */
